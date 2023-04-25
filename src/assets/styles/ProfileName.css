@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+.hello{
+    font-size: 40px;
+}
+.hello-hifen{
+    color: var(--theme-color);
+}
+.im-rakesh{
+    font-size: 60px;
+}
+.m{
+    color: var(--theme-color);
+    font-family: 'Secular One', sans-serif;
+}
+.rakesh-name{
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+.typing-effect{
+    display: flex;
+    font-size: 30px;
+}
+.effect-text{
+    color: var(--theme-color);
+}

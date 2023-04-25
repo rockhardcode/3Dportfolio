@@ -1,0 +1,11 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.text-hello{
+  font-size: 200px;
+  top: 0px;
+}

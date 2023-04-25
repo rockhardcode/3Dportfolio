@@ -1,0 +1,25 @@
+.about-container{
+    position: relative;
+    height: 99vh;
+    width: 100vw;
+    /* background-color: rgb(80, 79, 79); */
+    background-color: rgb(174, 139, 32);
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-canvas{
+    z-index: 1;
+}
+.glass-options{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0);
+}
