@@ -6,6 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three' 
 import AboutCard from '../CommonComponents/AboutCard'
 import { aboutConst } from '../../assets/constants/CommonConstants'
+import { useState } from 'react'
 
 function Rig({ children }) {
     const ref = useRef()
@@ -16,8 +17,14 @@ function Rig({ children }) {
     return <group ref={ref}>{children}</group>
   }
 const About = () => {
+  const [finalVal, setFinalVal] = useState([-10, -10.96, -40.16])
+  const values = [[-10, -10.96, -40.16], [-2, -2.96, -25.16]]
+  const handleClick = () => {
+    setFinalVal(values[1])
+  }
     return (
     <div className="about-container">
+      <button onClick={handleClick}>button</button>
       <div className='glass-options'>
         {aboutConst.map((item)=>{
           return <AboutCard num={item.num} title={item.title} desc={item.desc}/>
@@ -29,7 +36,7 @@ const About = () => {
         <Suspense fallback={null}>
           <group position={[0, 10, 0]}>
           <Rig>
-          <Guitar/>
+          <Guitar location={finalVal}/>
             </Rig>
             <ContactShadows
               rotation-x={Math.PI / 2}

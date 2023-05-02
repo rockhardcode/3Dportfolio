@@ -1,7 +1,15 @@
 import { useLoader, useFrame, useThree   } from "@react-three/fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { useRef } from "react"
-const Guitar = () => {
+import { useEffect } from "react"
+import { useState } from "react"
+const Guitar = (props) => {
+   const {location} = props
+   const [locations, setLocations] = useState()
+   useEffect(() => {
+      setLocations(location)
+   }, [location])
+   console.log(location)
     const group = useRef()
     const gltf = useLoader(GLTFLoader, 'models/guitar.glb')
     const headphones = useLoader(GLTFLoader, 'models/headphone.glb')
@@ -21,7 +29,7 @@ const Guitar = () => {
     return  <group ref={group} dispose={null}>
                 <mesh 
                    scale={10} 
-                   position={[-10, -10.96, -40.16]}
+                   position={locations} // [-10, -10.96, -40.16]
                    rotation={[5.76, 6, -0.19]}
                    >
                       <primitive object={gltf.scene}/>

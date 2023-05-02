@@ -3,7 +3,9 @@
     height: 99vh;
     width: 100vw;
     /* background-color: rgb(80, 79, 79); */
-    background-color: rgb(174, 139, 32);
+    /* background-color: rgb(174, 139, 32); */
+    background-color: rgb(203, 213, 54);
+
 
     overflow: hidden;
     display: flex;
