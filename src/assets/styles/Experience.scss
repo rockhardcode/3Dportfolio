@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Josefin+Sans&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+.experience-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(35, 34, 34);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* overflow: hidden; */
+    background-image: linear-gradient(to bottom, rgba(60, 60, 60, 0.988), rgba(0, 0, 0, 0.73)), url('./../images/Accenture/back2.jpg');
+    background-size: cover;
+  background-position: center;
+}
+.exp-main-back{
+    z-index: 55;
+}
+.image-exp{
+    /* margin-top: 50vh; */
+    margin: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+
+    .exp-msg-content{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(66, 66, 66, 0.929);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+        padding-left: 30px;
+        display: none;
+        -webkit-animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    
+}
+.year-exp{
+    // font-family: 'Almarai', sans-serif;
+    font-family: 'Righteous', cursive;
+    color: rgba(255, 255, 255, 0.573);
+    font-size: 30px;
+    margin-top: 100px;
+}
+.com-name{
+    font-size: 25px;
+    margin-top: 25px;
+    // font-family: 'Almarai', sans-serif;
+    font-family: 'Righteous', cursive;
+    text-wrap: wrap;
+}
+.com-desc{
+    font-size: 16px;
+    margin-bottom: 50px;
+    font-family: 'Kanit', sans-serif;
+}
+@-webkit-keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  @keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+  }
+  .image-main{
+    transition: transform .2s;
+  }
+  
+.image-exp:hover{
+    overflow: hidden;
+    .exp-msg-content{
+        display: block;
+    }
+    .image-main{
+        transform: scale(1.1);
+    }
+}
+.exp-inner-cont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    scrollbar-width: 1px;
+    padding-top: 50px;
+}
+.type-name-exp{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Almarai', sans-serif;
+}
+.exp-inner-cont::-webkit-scrollbar {
+    display: none;
+  }
+.i-started{
+    font-size: 35px;
+    font-weight: 800;
+    font-family: 'Almarai', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.line-container{
+    width: 2px;
+    background-color: rgb(138, 135, 135);
+    height: 50vh;
+}
+.circle-container{
+    width: 25px;
+    background-color: rgb(138, 135, 135);
+    height: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+.line-upper-cont{
+    height: 800px;
+    width: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.inner-height{
+    height: 70vh;
+    background-color: red;
+  
+}
+.type-name-exp{
+    text-align: center;
+}
+.inner-container-exp{
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(35, 34, 34);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+}

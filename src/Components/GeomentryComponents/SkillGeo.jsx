@@ -1,31 +1,32 @@
-import { useRef } from "react"
-import { Decal, Float, useTexture } from '@react-three/drei'
-import image from '../../assets/images/flogo.png'
-const SkillGeo = () => {
-      const group = useRef()
-      const [logo12] = useTexture('../../assets/images/flogo.png')
-    return  <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25}/>
-      <directionalLight position={[0,0,0.05]}/>
-      <mesh castShadow receiveShadow scale={0.5}>
-         <icosahedronGeometry args={[1,1]}/>
-         <meshStandardMaterial color="#fff8eb" polygonOffset polygonOffsetFactor={-5} flatShading/>
-         <Decal map={logo12} position={[0,0,1]}/> 
+import { useRef } from "react";
+import { Decal, Float, useTexture } from "@react-three/drei";
+import * as THREE from "three";
+import { useLoader } from "@react-three/fiber";
+
+const SkillGeo = (prop) => {
+  const texture = useLoader(
+    THREE.TextureLoader,
+    prop.image
+  );
+  return (
+    <Float speed={5} rotationIntensity={1} floatIntensity={6}>
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[0, 0, 0.05]} />
+      <mesh castShadow receiveShadow scale={1.5}>
+        <icosahedronGeometry args={[1, 1]} />
+        <meshStandardMaterial
+          color={prop.color}
+          polygonOffset
+          polygonOffsetFactor={-5}
+          flatShading
+          // transparent 
+          // opacity={0.5}
+          roughness={0.1}
+          metalness={0.7}
+        />
+        <Decal map={texture} position={[0, 0, 1]} scale={[1.1, 1.1, 1.1]} />
       </mesh>
     </Float>
-
-}
-export default SkillGeo
-
-
-// <mesh 
-// scale={0.5} 
-// position={[0,0,0]}
-// //    rotation={[1.76, 0.07, -0.19]}
-// >
-//  <Box/>
-//    {/* <icosahedronGeometry material={material}/> */}
-//    <meshStandardMaterial color={'hotpink'} />
-// </mesh>
-
-// map={decal}
+  );
+};
+export default SkillGeo;

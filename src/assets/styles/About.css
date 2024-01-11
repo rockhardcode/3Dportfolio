@@ -4,7 +4,8 @@
     width: 100vw;
     /* background-color: rgb(80, 79, 79); */
     /* background-color: rgb(174, 139, 32); */
-    background-color: rgb(203, 213, 54);
+    /* background-color: rgb(108, 219, 231); rgb(203, 213, 54) */
+    background-color: rgb(39, 39, 39);
 
 
     overflow: hidden;
@@ -16,6 +17,7 @@
     z-index: 1;
 }
 .glass-options{
+    background-color: red;
     position: absolute;
     display: flex;
     flex-direction: row;

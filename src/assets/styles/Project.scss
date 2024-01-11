@@ -1,0 +1,28 @@
+.main-container-project{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-container:hover{
+ .image-container{
+    display: block;
+}
+.image-movable{
+    display: block;
+}
+}
+.image-container{
+    width: 200px;
+    display: none;
+}
+.image-movable {
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    display: none;
+  }
+.image-container-movable{
+    width: 200px;
+}

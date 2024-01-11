@@ -1,4 +1,4 @@
-import '../../assets/styles/Links.css'
+import '../../assets/styles/Links.scss'
 import { Link } from 'react-router-dom'
 const Links = (prop) => {
  const {toLink, text} = prop
@@ -10,6 +10,8 @@ const Links = (prop) => {
               <li>
                 {text}
               </li>
+              <div className='hover-color'></div>
+              <div className='hover-color1'></div>
             </Link>
         </ul>
         </>

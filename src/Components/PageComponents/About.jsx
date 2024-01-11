@@ -7,6 +7,10 @@ import * as THREE from 'three'
 import AboutCard from '../CommonComponents/AboutCard'
 import { aboutConst } from '../../assets/constants/CommonConstants'
 import { useState } from 'react'
+import {motion} from "framer-motion"
+// import dynamic from 'next/dynamic';
+
+// const Guitar = dynamic(() => import('../GeomentryComponents/Guitar'), { ssr: false });
 
 function Rig({ children }) {
     const ref = useRef()
@@ -23,8 +27,8 @@ const About = () => {
     setFinalVal(values[1])
   }
     return (
-    <div className="about-container">
-      <button onClick={handleClick}>button</button>
+    <motion.div className="about-container" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0, transition: {duration: 0.001}}}>
+      {/* <button onClick={handleClick}>button</button> */}
       <div className='glass-options'>
         {aboutConst.map((item)=>{
           return <AboutCard num={item.num} title={item.title} desc={item.desc}/>
@@ -50,7 +54,7 @@ const About = () => {
           </group>
         </Suspense>
       </Canvas>
-        </div>
+        </motion.div>
     )
 }
 export default About

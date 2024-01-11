@@ -1,7 +1,10 @@
-.skill-container{
-    width: 100vw;
-    height: 100vh;
+.skill-main-container{
+    width: 88%;
+    /* height: 70%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
-.skills-canvas{
 
-}

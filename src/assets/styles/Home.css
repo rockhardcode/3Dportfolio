@@ -1,22 +1,28 @@
 .home-container{
 position: relative;
-height: 87vh;
+height: 100vh;
 width: 100vw;
 overflow: hidden;
-padding-top: 80px;
 display: flex;
 flex-direction: row;
+background-color: #242424;
 }
 .profile-name{
     position: absolute;
     top: 250px;
     left: 250px;
+    z-index: 2;
 }
-.canvas-container{
+/* .canvas-container{
     width: 100vw;
     height: 100vh;
-}
+} */
 .canvas-globe{
     height: 80vh !important;
     left: 800px;
+}
+.home-objects{
+z-index: 1;
+width: 100vw;
+height: 100vh;
 }
